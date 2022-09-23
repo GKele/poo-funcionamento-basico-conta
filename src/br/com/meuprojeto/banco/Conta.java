@@ -37,17 +37,25 @@ public class Conta {
 	
 	public static void main(String[] args) {
 		//uso de classe com  array
-		Conta c[] = new Conta[100];
+		Conta contas[] = new Conta[100];
 		
-		c[0] = new Conta("1234", 234);
-		c[0].creditar(50);
+		contas[0] = new Conta("1234", 234);
+		contas[0].creditar(50);
 		
 		
-		c[1] = new Conta("5478", 300);
-		c[1].debitar(100);
+		contas[1] = new Conta("5478", 300);
+		contas[1].debitar(100);
 		
-		System.out.println("Numero da conta: " + c[0].numero + " Saldo da conta: " + c[0].saldo);
-		System.out.println("Numero da conta: " + c[1].numero + " Saldo da conta: " + c[1].saldo);
+		contas[2] = new Conta("9875", 800);
+		contas[2].debitar(36);
+		
+		UtilitarioContas uc = new UtilitarioContas();
+		
+		uc.imprimirContas(contas);
+		uc.somarSaldos(contas);
+		
+		//System.out.println("Numero da conta: " + contas[0].numero + " Saldo da conta: " + contas[0].saldo);
+		//System.out.println("Numero da conta: " + contas[1].numero + " Saldo da conta: " + contas[1].saldo);
 		
 		
 //		Conta obj1 = new Conta("1234", 234);
